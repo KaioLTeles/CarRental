@@ -24,7 +24,7 @@ namespace CarRentalApp
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(carModel));
 
-            RentalService rentalService = new RentalService(hour, day);
+            RentalService rentalService = new RentalService(hour, day, new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 
